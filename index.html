@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Project: Scene change</title>
+        <style>
+        #leafers {
+            position: absolute;
+            top: 210px;
+            left: 378px;
+        }
+        body{
+            background-color:rgba(59, 212, 179);
+        }    
+        button{
+            background-color:rgb(57, 16, 181);
+        }
+        </style>
+    </head>
+    <body>
+
+    <h1>The butterfly egg!</h1>
+    <img src="https://i.pinimg.com/originals/64/91/62/6491620eec61db85728223d7dd2ff03d.jpg" alt="Picture of a butterfly egg"><br>
+    <p class="o">A cluster of butterfly eggs are on a  leaf.(Image from Pintrest).</p>
+    <p id ="Stuff">First off, a butterfly lays eggs on a milkweed plant.<br> Then, the eggs sit there, developing. This process takes a few weeks.<br> When laid, the eggs have this kind of glue that hardens on the leaf,<br> so they won't die.</p>
+    <button>Caterpillar</button>
+    <button id="2">Pupa!<br></button>
+    <button id="3">Butterfly!</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        
+        var c1=function(){
+            $("h1").text("The caterpillar!");
+        $("img").attr("alt", "Picture of the caterpillar larvae.");
+        $("img").attr("src", "https://en.wikipedia.org/wiki/Butterfly#/media/File:Papilionidae_-_Papilio_machaon-2.JPG");
+        $(".o").text("A caterpillar larvae(Image from Hectonichus from Wikipedia.)");
+        $("#Stuff").html("The caterpillars eat mostly milkweed leaves. Fun fact: Some caterpillars can form relationships with ants!<br> Then, they go onto a leaf and  spin something.......");
+        };
+        $("button").on("click", c1);
+        var c2 = function(){
+            $("h1").text("The pupa!!!");
+            $("img").attr("src","https://ansp.org/~/media/Images/ans/explore/online-exhibits/butterflies/lifecycle/monarch_chrysalis.ashx?w=182&h=250&as=1&la=en&hash=ACA695F26784581C4C0568870745E8CEDC88BCAC");
+            $("img").attr("alt", "Picture of a butterfly pupa.");
+            $(".o").text("Picture of the butterfly pupa.(From The Academy of Natural Sciences at Drexel University)");
+            $("#Stuff").text("The caterpillar wraps itself around in a pupa, and it just stays there. That's when a caterpillar starts to develop into a butterfly!");
+        };
+        var c3=function(){
+          $("h1").text("The butterfly!!!");
+          $("img").attr("src","https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Fesoj_-_Papilio_machaon_%28by%29.jpg/220px-Fesoj_-_Papilio_machaon_%28by%29.jpg");
+          $("img").attr("alt", "Picture of a butterfly.");
+           $(".o").text("Picture of the butterfly.(From Wikipedia.)");
+           $("#Stuff").text("The Butterfly comes out of the pupa, ready. There is just one catch, though. When the butterfly comes out, its wings are wet, so it has to wait. Then, the butterfly goes out! ");
+        };
+        $("#2").on("click", c2);
+        $("#3").on("click", c3);
+    </script>
+    </body>
+</html>
